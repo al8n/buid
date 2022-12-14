@@ -1,0 +1,20 @@
+[package]
+name = "buid"
+version = "0.0.0"
+edition = "2021"
+license = "MIT/Apache-2.0"
+description = "(WIP) Bytes unique ID"
+
+[features]
+default = ["std"]
+std = []
+nightly = []
+
+base32 = ["crabmole/base32"]
+base64 = ["crabmole/base64"]
+hex = ["crabmole/hex"]
+ascii85 = ["crabmole/ascii85"]
+
+[dependencies]
+crabmole = { version = "0.1", optional = true }
+serde = { version = "1", optional = true, features = ["derive"] }
